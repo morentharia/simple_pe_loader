@@ -1,0 +1,3 @@
+﻿  simplepeloader.cpp
+Z:\simplepeloader\simplepeloader.cpp(167,31): warning C4018: '<': signed/unsigned mismatch
+  simplepeloader.vcxproj -> Z:\simplepeloader\Debug\simplepeloader.exe
