@@ -4,10 +4,10 @@ import paramiko
 import shutil
 
 def main():
-    shutil.copy(os.path.expanduser("~/GOPATH/src/github.com/morentharia/simple_pe_loader/Debug/simplepeloader.exe"),
-                os.path.expanduser("~/hack/vmware_share/main.exe"))
-    shutil.copy(os.path.expanduser("~/GOPATH/src/github.com/morentharia/simple_pe_loader/hello.exe"),
-                os.path.expanduser("~/hack/vmware_share/hello.exe"))
+    # shutil.copy(os.path.expanduser("~/GOPATH/src/github.com/morentharia/simple_pe_loader/Debug/simplepeloader.exe"),
+    #             os.path.expanduser("~/hack/vmware_share/main.exe"))
+    # shutil.copy(os.path.expanduser("~/GOPATH/src/github.com/morentharia/simple_pe_loader/hello.exe"),
+    #             os.path.expanduser("~/hack/vmware_share/hello.exe"))
     # shutil.copy(os.path.expanduser("~/GOPATH/src/github.com/morentharia/pepepepe/shellcode.bin"),
     #             os.path.expanduser("~/hack/vmware_share/shellcode.bin"))
     try:
@@ -37,6 +37,8 @@ def main():
             '''cd z:\\; '''
             '''pwd ;'''
             ''' MSBuild .\\simplepeloader\\simplepeloader.vcxproj -p:Configuration=Debug -p:Platform=x86;'''
+            # '''C:\\PSTools\\PsExec64.exe -i 1 -s \'C:\\main.exe\' ''',
+
             # ''' C:\\\\Program Files\\\\Microsoft Visual Studio\\\\2022\\\\Community\\\\MSBuild\\\\Current\\\\Bin\\\\MSBuild ''',
             # '''MSBuild .\simplepeloader\simplepeloader.vcxproj -p:Configuration=Debug -p:Platform=x86'''
 
@@ -45,8 +47,6 @@ def main():
             # '''Copy-Item 'Z:\\hello.exe' -Destination C:\\ ''',
             # '''C:\\main.exe ''',
             # '''C:\\PSTools\\PsExec64.exe -i 1 -s \'C:\\main.exe\' ''',
-
-
             #VmWare
             # '''Copy-Item '\\\\vmware-host\\Shared Folders\\shared\\main.exe' -Destination C:\\ ''',
             # '''Copy-Item '\\\\vmware-host\\Shared Folders\\shared\\shellcode.bin' -Destination C:\\ ''',
