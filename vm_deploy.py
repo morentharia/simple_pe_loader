@@ -4,8 +4,8 @@ import paramiko
 import shutil
 
 def main():
-    # shutil.copy(os.path.expanduser("~/GOPATH/src/github.com/morentharia/simple_pe_loader/Debug/simplepeloader.exe"),
-    #             os.path.expanduser("~/hack/vmware_share/main.exe"))
+    shutil.copy(os.path.expanduser("~/GOPATH/src/github.com/morentharia/simple_pe_loader/simplepeloader.c"),
+                os.path.expanduser("~/hack/vmware_share/simplepeloader/simplepeloader.c"))
     # shutil.copy(os.path.expanduser("~/GOPATH/src/github.com/morentharia/simple_pe_loader/hello.exe"),
     #             os.path.expanduser("~/hack/vmware_share/hello.exe"))
     # shutil.copy(os.path.expanduser("~/GOPATH/src/github.com/morentharia/pepepepe/shellcode.bin"),
