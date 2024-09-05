@@ -4,7 +4,7 @@ import paramiko
 import shutil
 
 def main():
-    shutil.copy(os.path.expanduser("~/GOPATH/src/github.com/morentharia/simple_pe_loader/main.exe"),
+    shutil.copy(os.path.expanduser("~/GOPATH/src/github.com/morentharia/simple_pe_loader/Debug/simplepeloader.exe"),
                 os.path.expanduser("~/hack/vmware_share/main.exe"))
     shutil.copy(os.path.expanduser("~/GOPATH/src/github.com/morentharia/simple_pe_loader/hello.exe"),
                 os.path.expanduser("~/hack/vmware_share/hello.exe"))
@@ -31,9 +31,19 @@ def main():
             #VirtualBox
             # '''Z:\\main.exe ''',
             # '''Copy-Item '\\\\vmware-host\\Shared Folders\\shared\\main.exe' -Destination C:\\ ''',
-            '''Copy-Item 'Z:\\main.exe' -Destination C:\\ ''',
-            '''Copy-Item 'Z:\\hello.exe' -Destination C:\\ ''',
-            '''C:\\main.exe ''',
+
+            '''$env:Path = 'C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin;' + $env:Path; '''
+            ''' MSBuild; '''
+            '''cd z:\\; '''
+            '''pwd ;'''
+            ''' MSBuild .\\simplepeloader\\simplepeloader.vcxproj -p:Configuration=Debug -p:Platform=x86;'''
+            # ''' C:\\\\Program Files\\\\Microsoft Visual Studio\\\\2022\\\\Community\\\\MSBuild\\\\Current\\\\Bin\\\\MSBuild ''',
+            # '''MSBuild .\simplepeloader\simplepeloader.vcxproj -p:Configuration=Debug -p:Platform=x86'''
+
+            # '''MSBuild .\simplepeloader\simplepeloader.vcxproj -p:Configuration=Debug -p:Platform=x86'''
+            # '''Copy-Item 'Z:\\main.exe' -Destination C:\\ ''',
+            # '''Copy-Item 'Z:\\hello.exe' -Destination C:\\ ''',
+            # '''C:\\main.exe ''',
             # '''C:\\PSTools\\PsExec64.exe -i 1 -s \'C:\\main.exe\' ''',
 
 
